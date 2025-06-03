@@ -2,12 +2,12 @@ package OrangeHRMS;
 
 import java.time.Duration;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
 
 public class Code_Execution {
 	
@@ -22,7 +22,7 @@ public class Code_Execution {
 		HomePage mainpage = new HomePage(driver);
 		PIM_Employee_List_page EmpList=new PIM_Employee_List_page(driver);
 		LeavePage Leave=new LeavePage(driver);
-		AddEmployee Add=new AddEmployee(driver);
+		AddEmployee AddEmp=new AddEmployee(driver);
 		
 		
 		// Wait until username textbox is not visible to handle NoSuchElementFound exception
@@ -45,20 +45,30 @@ public class Code_Execution {
 		System.out.println("Clicked on Add button and sucessfully redirected to Add Employee page");
 		
 		// Add Employee
-		Add.FirstName("Prathamesh");
-		Add.MiddleName("Bhagwan");
-		Add.LastName("Shindekar");
-		Add.toggle();
-		Add.createUsername("Prathamesh");
-		Add.clkEnablebutton();
-		Add.createPassword("1234567a");
-		Add.confirmPassword("1234567a");
-		Add.clickSubmit();
+		AddEmp.FirstName("Selenium");
+		AddEmp.MiddleName("Java");
+		AddEmp.LastName("Maven");
+		AddEmp.toggle();
+		AddEmp.createUsername("Selenium");
+		AddEmp.clkEnablebutton();
+		AddEmp.createPassword("1234567a");
+		AddEmp.confirmPassword("1234567a");
+		AddEmp.clickSubmit();
 		
 		System.out.println("User is Redirected to Employee page automatically");
-		
-		//
-		
-		
+	
+		//Add details in Employee Tab
+		EmpList.addOtherID("0123");
+		EmpList.drivingLicence("DUMMY1234");
+		EmpList.LicenceExpiry();
+		EmpList.Nationality();
+		EmpList.MaritalStatus();
+		EmpList.DateOFbirth();
+		EmpList.MaleRadioBtn();
+		EmpList.SaveBtn1();
+		EmpList.AXWXXSX();
+		EmpList.BloodGroup();
+		EmpList.testField();
+		EmpList.SaveBtn2();
 	} 
 }

@@ -52,23 +52,23 @@ public class AddEmployee {
 	public void FirstName(String FirstName) {
 		WebDriverWait wait = new WebDriverWait(Driver, Duration.ofSeconds(15));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(EmpFirstName)).sendKeys(FirstName);
-		System.out.println("added name");
+		System.out.println("Added name");
 	}
 	
 	
 	public void MiddleName(String MiddleName) {
 		Driver.findElement(EmpMiddleName).sendKeys(MiddleName);
-		System.out.println("added middle name");
+		System.out.println("Added middle name");
 	}
 	
 	public void LastName(String LastName) {
 		Driver.findElement(EmpLastName).sendKeys(LastName);
-		System.out.println("added last name");
+		System.out.println("Added last name");
 	}
 	
 	public void EmpID(String ID) {
 		Driver.findElement(EmpID).sendKeys(ID);
-		System.out.println("added employee id");
+		System.out.println("Added employee id");
 	}
 	
 	public void toggle() {
@@ -83,7 +83,7 @@ public class AddEmployee {
 	
 	public void createUsername(String uname) {
 		Driver.findElement(CreateUname).sendKeys(uname);
-		System.out.println("added username");
+		System.out.println("Added username");
 	}
 	
 	public void clkEnablebutton() {
@@ -100,21 +100,21 @@ public class AddEmployee {
 	
 	public void createPassword(String PW) {
 		Driver.findElement(CreatePW).sendKeys(PW);
-		System.out.println("added password");
+		System.out.println("Added password");
 	}
 
 	public void confirmPassword(String Confirmpassword) {
 		Driver.findElement(ConfirmPW).sendKeys(Confirmpassword);
-		System.out.println("added confirm password");
+		System.out.println("Added confirm password");
 	}
 	
 	public void clickCancel() {
 		Driver.findElement(ClkCancel).click();
-		System.out.println("clicked cancel button");
+		System.out.println("Clicked cancel button");
 	}
 	
 	public void clickSubmit() {
 		Driver.findElement(ClkSubmit).click();
-		System.out.println("clicked submit button, Employee is added sucessfully");
+		System.out.println("Clicked submit button, Employee is added sucessfully");
 	}
 }
